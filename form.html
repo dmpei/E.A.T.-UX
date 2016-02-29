@@ -1,0 +1,1239 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>EAT Challenge</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.8.17.custom.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/animate.css" charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
+
+    <style rel="stylesheet" type="text/css">
+        html *
+        {
+           font-size: 1.1em !important;
+           color: #FFFFFF !important;
+           font-family: 'Open Sans', sans-serif;
+           font-weight: 300;
+        }
+
+        #titleText
+        {
+           font-size: 2.5em !important;
+           color: #FFFFFF !important;
+           font-family: 'Open Sans', sans-serif;
+           font-weight: 300;
+        }
+
+        body {
+          background-color: #594949;
+        }
+
+        .wrap {
+          width: 450px;
+          margin: 0 auto;
+        }
+
+        .mat-label {
+          display: block;
+          font-size: 16px;
+          transform: translateY(25px);
+          color: #ffffff;
+          transition: all 0.5s;
+        }
+
+        .mat-input {
+          position: relative;
+          background: transparent;
+          width: 100%;
+          border: none;
+          outline: none;
+          padding: 8px 0;
+          font-size: 16px;
+        }
+
+        .mat-div {
+          padding: 30px 0 0 0;
+          position: relative;
+        }
+
+        .mat-div:after, .mat-div:before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          bottom: 0;
+          left: 0;
+          transition: all 0.5s;
+        }
+
+        .mat-div::after {
+          background-color: #8E8DBE;
+          transform: scaleX(0);
+        }
+
+        .is-active::after {
+          transform: scaleX(1);
+        }
+
+        .is-active .mat-label {
+          color: #8E8DBE;
+        }
+
+        .is-completed .mat-label {
+          font-size: 12px;
+          transform: translateY(0);
+        }
+
+        .clickMe {
+          background-color: #70ABA4;
+          border: none;
+          display: block;
+          margin: 35px auto;
+          padding: 15px 30px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        #kid2 {
+          display: none;
+        }
+        #kid3 {
+          display: none;
+        }
+        #kid4 {
+          display: none;
+        }
+
+        #adult2 {
+          display: none;
+        }
+        #adult3 {
+          display: none;
+        }
+        #adult4 {
+          display: none;
+        }
+        #adult5 {
+          display: none;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="dist/jspdf.debug.js"></script>
+    <script type="text/javascript" src="js/basic.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <form name="myForm">
+
+        <div class="wrap">
+
+        <h1 id="titleText" href="form.html">Please Fill All Required Fields</h1>
+<!-- step 1 -->
+        <span id="kid1">
+          <div class="mat-div">
+            <label for="first-name" class="mat-label">Child's First Name</label>
+            <input class="mat-input" id="firstName" required>
+          </div>
+
+          <div class="mat-div">
+            <label for="first-name" class="mat-label">Child's  Middle Initial</label>
+            <input  class="mat-input" id="middleInitial" required>
+          </div>
+
+          <div class="mat-div">
+            <label for="first-name" class="mat-label">Child's Last Name</label>
+            <input  class="mat-input" id="lastName" required>
+          </div>
+          <br>
+              <input type="radio" name="student" value="Yes" checked> Student<br>
+              <input type="radio" name="student" value="No"> Not a Student<br>
+              <br>
+              <input type="radio" name="runaway" value="No" checked>Foster Child<br>
+              <input type="radio" name="runaway" value="Yes">Runaway, Migrant, Homeless Child<br>
+        <br>
+      </span>
+
+        <span id="kid2">
+          <div class="mat-div">
+            <label  for="first-name" class="mat-label" name="part2">Child's First Name</label>
+            <input  type="text" class="mat-input" id="firstName2" required>
+          </div>
+
+          <div class="mat-div">
+            <label  for="first-name" class="mat-label" name="part2">Child's  Middle Initial</label>
+            <input  type="text" class="mat-input" id="middleInitial2" required>
+          </div>
+
+          <div class="mat-div">
+            <label for="first-name" class="mat-label" name="part2">Child's Last Name</label>
+            <input  type="text" class="mat-input" id="lastName2" required>
+          </div>
+          <br>
+          <input type="radio" name="student2" value="Yes" checked> Student<br>
+          <input type="radio" name="student2" value="No"> Not a Student<br>
+          <br>
+          <input type="radio" name="runaway2" value="No" checked>Foster Child<br>
+          <input type="radio" name="runaway2" value="Yes">Runaway, Migrant, Homeless Child<br>
+    <br>
+        </span>
+
+        <br>
+
+        <span id="kid3">
+          <div class="mat-div">
+            <label  for="first-name" class="mat-label" name="part3">Child's First Name</label>
+            <input  type="text" class="mat-input" id="firstName3" required>
+          </div>
+
+          <div class="mat-div">
+            <label  for="first-name" class="mat-label" name="part3">Child's Middle Initial</label>
+            <input  type="text" class="mat-input" id="middleInitial3" required>
+          </div>
+
+          <div class="mat-div">
+            <label for="first-name" class="mat-label" name="part3">Child's Last Name</label>
+            <input  type="text" class="mat-input" id="lastName3" required>
+          </div>
+          <br>
+          <input type="radio" name="student3" value="Yes" checked> Student<br>
+          <input type="radio" name="student3" value="No"> Not a Student<br>
+          <br>
+          <input type="radio" name="runaway3" value="No" checked>Foster Child<br>
+          <input type="radio" name="runaway3" value="Yes">Runaway, Migrant, Homeless Child<br>
+    <br>
+        </span>
+        <br>
+
+        <span id="kid4">
+          <div class="mat-div">
+            <label  for="first-name" class="mat-label" name="part4">Child's First Name</label>
+            <input  type="text" class="mat-input" id="firstName4" required>
+          </div>
+
+          <div class="mat-div">
+            <label  for="first-name" class="mat-label" name="part4">Child's Middle Initial</label>
+            <input  type="text" class="mat-input" id="middleInitial4" required>
+          </div>
+
+          <div class="mat-div">
+            <label for="first-name" class="mat-label" name="part4">Child's Last Name</label>
+            <input  type="text" class="mat-input" id="lastName4" required>
+          </div>
+          <br>
+          <input type="radio" name="student4" value="Yes" checked> Student<br>
+          <input type="radio" name="student4" value="No"> Not a Student<br>
+          <br>
+          <input type="radio" name="runaway4" value="No" checked>Foster Child<br>
+          <input type="radio" name="runaway4" value="Yes">Runaway, Migrant, Homeless Child<br>
+    <br>
+        </span>
+        <br>
+
+        <input id="clickMe" class="clickMe" type="button" value="Add Child" onclick="unHide();" />
+
+        <!-- end step 1 -->
+<!-- step 2 -->
+            <div class="mat-div">
+            <label for="first-name" class="mat-label">Case Number (If Applicable)</label>
+            <input type="text" class="mat-input" id="caseNumber" required>
+          </div>
+  <!-- end step 2 -->
+  <!-- step 3 -->
+            <!--part A-->
+            <span id="childIncome">
+              <div class="mat-div">
+                <label  for="child-income" class="mat-label" name="step-3">Child Income ($)</label>
+                <input  type="text" class="mat-input" id="child-income" required>
+              </div>
+
+              <br>
+              <input type="radio" name="child-income-often" value="Weekly"> Weekly<br>
+              <input type="radio" name="child-income-often" value="Bi-weekly"> Bi-weekly<br>
+              <input type="radio" name="child-income-often" value="2x-Month"> 2x Month<br>
+              <input type="radio" name="child-income-often" value="Monthly"> Monthly<br>
+              <br>
+            </span>
+          <!--end part A-->
+          <!--part B-->
+          <span id="adult1">
+            <div class="mat-div">
+              <label  for="adult-name1" class="mat-label" name="adult-part1">Name of Adult Household Member (First and Last)</label>
+              <input  type="text" class="mat-input" id="adult-name1" required>
+            </div>
+
+            <div class="mat-div">
+              <label  for="adult-income1" class="mat-label" name="adult-part1">Earnings from Work ($)</label>
+              <input  type="text" class="mat-input" id="adult-income1" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-income-often1" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-income-often1" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-income-often1" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-income-often1" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-assisstance1" class="mat-label" name="adult-part1">Public Assisstance, Alimony, Child Support ($)</label>
+              <input  type="text" class="mat-input" id="adult-assisstance1" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-assist-often1" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-assist-often1" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-assist-often1" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-assist-often1" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-other1" class="mat-label" name="adult-part1">Pensions, Retirements any other income ($)</label>
+              <input  type="text" class="mat-input" id="adult-other1" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-other-often1" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-other-often1" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-other-often1" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-other-often1" value="Monthly"> Monthly<br>
+            <br>
+          </span>
+
+          <span id="adult2">
+            <div class="mat-div">
+              <label  for="adult-name2" class="mat-label" name="adult-part2">Name of Adult Household Member (First and Last)</label>
+              <input  type="text" class="mat-input" id="adult-name2" required>
+            </div>
+
+            <div class="mat-div">
+              <label  for="adult-income2" class="mat-label" name="adult-part2">Earnings from Work ($)</label>
+              <input  type="text" class="mat-input" id="adult-income2" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-income-often2" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-income-often2" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-income-often2" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-income-often2" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-assisstance2" class="mat-label" name="adult-part2">Public Assisstance, Alimony, Child Support ($)</label>
+              <input  type="text" class="mat-input" id="adult-assisstance2" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-assist-often2" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-assist-often2" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-assist-often2" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-assist-often2" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-other2" class="mat-label" name="adult-part2">Pensions, Retirements any other income ($)</label>
+              <input  type="text" class="mat-input" id="adult-other2" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-other-often2" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-other-often2" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-other-often2" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-other-often2" value="Monthly"> Monthly<br>
+            <br>
+          </span>
+
+          <span id="adult3">
+            <div class="mat-div">
+              <label  for="adult-name3" class="mat-label" name="adult-part3">Name of Adult Household Member (First and Last)</label>
+              <input  type="text" class="mat-input" id="adult-name3" required>
+            </div>
+
+            <div class="mat-div">
+              <label  for="adult-income3" class="mat-label" name="adult-part3">Earnings from Work ($)</label>
+              <input  type="text" class="mat-input" id="adult-income3" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-income-often3" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-income-often3" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-income-often3" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-income-often3" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-assisstance3" class="mat-label" name="adult-part3">Public Assisstance, Alimony, Child Support ($)</label>
+              <input  type="text" class="mat-input" id="adult-assisstance3" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-assist-often3" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-assist-often3" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-assist-often3" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-assist-often3" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-other3" class="mat-label" name="adult-part3">Pensions, Retirements any other income ($)</label>
+              <input  type="text" class="mat-input" id="adult-other3" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-other-often3" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-other-often3" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-other-often3" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-other-often3" value="Monthly"> Monthly<br>
+            <br>
+          </span>
+
+          <span id="adult4">
+            <div class="mat-div">
+              <label  for="adult-name4" class="mat-label" name="adult-part4">Name of Adult Household Member (First and Last)</label>
+              <input  type="text" class="mat-input" id="adult-name4" required>
+            </div>
+
+            <div class="mat-div">
+              <label  for="adult-income4" class="mat-label" name="adult-part4">Earnings from Work ($)</label>
+              <input  type="text" class="mat-input" id="adult-income4" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-income-often4" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-income-often4" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-income-often4" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-income-often4" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-assisstance4" class="mat-label" name="adult-part4">Public Assisstance, Alimony, Child Support ($)</label>
+              <input  type="text" class="mat-input" id="adult-assisstance4" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-assist-often4" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-assist-often4" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-assist-often4" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-assist-often4" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-other4" class="mat-label" name="adult-part4">Pensions, Retirements any other income ($)</label>
+              <input  type="text" class="mat-input" id="adult-other4" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-other-often4" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-other-often4" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-other-often4" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-other-often4" value="Monthly"> Monthly<br>
+            <br>
+          </span>
+
+          <span id="adult5">
+            <div class="mat-div">
+              <label  for="adult-name5" class="mat-label" name="adult-part5">Name of Adult Household Member (First and Last)</label>
+              <input  type="text" class="mat-input" id="adult-name5" required>
+            </div>
+
+            <div class="mat-div">
+              <label  for="adult-income5" class="mat-label" name="adult-part5">Earnings from Work ($)</label>
+              <input  type="text" class="mat-input" id="adult-income5" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-income-often5" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-income-often5" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-income-often5" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-income-often5" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-assisstance5" class="mat-label" name="adult-part5">Public Assisstance, Alimony, Child Support ($)</label>
+              <input  type="text" class="mat-input" id="adult-assisstance5" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-assist-often5" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-assist-often5" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-assist-often5" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-assist-often5" value="Monthly"> Monthly<br>
+            <br>
+
+            <div class="mat-div">
+              <label  for="adult-other5" class="mat-label" name="adult-part5">Pensions, Retirements any other income ($)</label>
+              <input  type="text" class="mat-input" id="adult-other5" required>
+            </div>
+
+            <br>
+            <input type="radio" name="adult-other-often5" value="Weekly"> Weekly<br>
+            <input type="radio" name="adult-other-often5" value="Bi-weekly"> Bi-weekly<br>
+            <input type="radio" name="adult-other-often5" value="2x-Month"> 2x Month<br>
+            <input type="radio" name="adult-other-often5" value="Monthly"> Monthly<br>
+            <br>
+          </span>
+          <input id="clickMe" class="clickMe" type="button" value="Add Adult" onclick="unHideAdult();" />
+          <br>
+          <div class="mat-div">
+            <label  for="house-members" class="mat-label" name="house-members">Total Household Members (Children and Adults)</label>
+            <input  type="text" class="mat-input" id="house-members" required>
+          </div>
+
+          <div class="mat-div">
+            <label  for="last-ssn" class="mat-label" name="last-ssn">Last Four Digits of SSN of Primary Wage Earner</label>
+            <input  type="text" class="mat-input" id="last-ssn" required>
+          </div>
+          <input type="radio" name="no-ssn" value="no-ssn"> Check if no SSN<br>
+
+
+          <!--end part B-->
+      </span>
+  <!-- end step 3 -->
+  <!-- step 4 -->
+      <div class="mat-div">
+        <label  for="street-address" class="mat-label" name="street-address">Street Address (If Available)</label>
+        <input  type="text" class="mat-input" id="street-address" required>
+      </div>
+      <div class="mat-div">
+        <label  for="city" class="mat-label" name="city">City</label>
+        <input  type="text" class="mat-input" id="city" required>
+      </div>
+      <div class="mat-div">
+        <label  for="state" class="mat-label" name="state">State</label>
+        <input  type="text" class="mat-input" id="state" required>
+      </div>
+      <div class="mat-div">
+        <label  for="zip" class="mat-label" name="zip">ZIP Code</label>
+        <input  type="text" class="mat-input" id="zip" required>
+      </div>
+      <div class="mat-div">
+        <label  for="adult-name" class="mat-label" name="adult-name">Name of Adult Completing This Form</label>
+        <input  type="text" class="mat-input" id="adult-name" required>
+      </div>
+        <!-- TODO: replace with autoDate -->
+        <div class="mat-div">
+        <label  for="zip" class="mat-label" name="date">Date (MM/DD/YYYY)</label>
+        <input  type="text" class="mat-input" id="date" required>
+      </div>
+
+  <!-- end step 4 -->
+    </form>
+
+        <input id="clickMe" class="clickMe" type="button" value="Submit!" onclick="validateForm();" />
+
+        <script type="text/javascript">
+
+            var numChildren = 1;
+            var numAdults = 1;
+
+            function unHide() {
+              if (numChildren == 1)
+                  document.getElementById("kid2").style.display = "block";
+              if (numChildren == 2)
+                  document.getElementById("kid3").style.display = "block";
+              if (numChildren == 3)
+                  document.getElementById("kid4").style.display = "block";
+              if (numChildren > 3)
+                alert("Sorry, only four children per form! Please submit a second form or contact your local school district.");
+              numChildren += 1;
+            }
+
+            function unHideAdult() {
+              if (numAdults == 1)
+                  document.getElementById("adult2").style.display = "block";
+              if (numAdults == 2)
+                  document.getElementById("adult3").style.display = "block";
+              if (numAdults == 3)
+                  document.getElementById("adult4").style.display = "block";
+              if (numAdults == 4)
+                  document.getElementById("adult5").style.display = "block";
+              if (numAdults > 4)
+                alert("Sorry, only five adults per form! Please submit a second form or contact your local school district.");
+              numAdults += 1;
+            }
+
+            function validateForm()
+                {
+                var a=document.forms["myForm"]["firstName"].value;
+                var b=document.forms["myForm"]["middleInitial"].value;
+                var c=document.forms["myForm"]["lastName"].value;
+                var e=document.forms["myForm"]["adult-name1"].value;
+                var f=document.forms["myForm"]["adult-income1"].value;
+                var g=document.forms["myForm"]["adult-assisstance1"].value;
+                var h=document.forms["myForm"]["adult-other1"].value;
+                var i=document.forms["myForm"]["house-members"].value;
+                var k=document.forms["myForm"]["city"].value;
+                var l=document.forms["myForm"]["state"].value;
+                var m=document.forms["myForm"]["zip"].value;
+                var n=document.forms["myForm"]["adult-name"].value;
+                var o=document.forms["myForm"]["date"].value;
+
+                if (a==null || a=="",b==null || b=="",c==null || c=="",e==null || e=="",f==null || f=="",g==null || g=="",h==null || h=="",i==null || i=="",k==null || k=="",l==null || l=="",m==null || m=="",n==null || n=="",o==null || o=="")
+                  {
+                  alert("Please Fill All Required Field");
+                  return false;
+                  }
+                makePDF()
+                return true
+                }
+
+            function makePDF() {
+                    // FETCH the data image URI. Its really long so its stored in another file (about 1.1 Mb)
+                    var imgData = "";
+
+                    $.ajax({
+                        url: 'dataURI.txt',
+                        type: 'get',
+                        async: false,
+                        success: function(string) {
+                          imgData = string;
+                        }
+                    });
+
+                    var doc = new jsPDF();
+                    doc.addImage(imgData, 'JPEG', 5, 5, 200, 200);
+                    doc.setFontSize(10);
+
+/*                  first children  */
+                    var firstName = document.getElementById("firstName").value;
+                    var MI = document.getElementById("middleInitial").value;
+                    var lastName = document.getElementById("lastName").value;
+                    var caseNumber = document.getElementById("caseNumber").value;
+
+                    var student = document.getElementsByName("student");
+                    var isStudent;
+
+                    for(var i = 0; i < student.length; i++) {
+                      if(student[i].checked == true) {
+                        isStudent = student[i].value;
+                      }
+                    }
+
+                    var runaway = document.getElementsByName("runaway");
+                    var isRunaway;
+
+                    for(var i = 0; i < runaway.length; i++) {
+                      if(runaway[i].checked == true) {
+                        isRunaway = runaway[i].value;
+                      }
+                    }
+
+                    doc.text(38,39.5, firstName);
+                    doc.text(92.3, 39.5, MI);
+                    doc.text(100, 39.5, lastName);
+
+                    if(isStudent == 'No') {
+                      doc.text(179.5, 39.5, 'X');
+                    }
+                    else {
+                      doc.text(174, 39.5, 'X');
+                    }
+
+                    if(isRunaway == 'No') {
+                      doc.text(191, 39.5, 'X');
+                    }
+                    else {
+                      doc.text(197, 39.5, 'X');
+                    }
+/*         end      first children  */
+/*                  second child   */
+                if (numChildren > 1 ) {
+                  var ycoord = 47;
+                    var firstName2 = document.getElementById("firstName2").value;
+                    var MI2 = document.getElementById("middleInitial2").value;
+                    var lastName2 = document.getElementById("lastName2").value;
+
+                    var student2 = document.getElementsByName("student2");
+                    var isStudent2;
+
+                    for(var i = 0; i < student2.length; i++) {
+                      if(student2[i].checked == true) {
+                        isStudent2 = student2[i].value;
+                      }
+                    }
+
+                    var runaway2 = document.getElementsByName("runaway2");
+                    var isRunaway2;
+
+                    for(var i = 0; i < runaway2.length; i++) {
+                      if(runaway2[i].checked == true) {
+                        isRunaway2 = runaway2[i].value;
+                      }
+                    }
+
+                    doc.text(38,ycoord, firstName2);
+                    doc.text(92.3, ycoord, MI2);
+                    doc.text(100, ycoord, lastName2);
+
+                    if(isStudent2 == 'No') {
+                      doc.text(179.5, ycoord - 1, 'X');
+                    }
+                    else {
+                      doc.text(174, ycoord - 1, 'X');
+                    }
+
+                    if(isRunaway2 == 'No') {
+                      doc.text(191, ycoord - 1, 'X');
+                    }
+                    else {
+                      doc.text(197, ycoord - 1, 'X');
+                    }
+                  }
+/*         end      second children  */
+/*                  third child   */
+                if (numChildren > 2 ) {
+                  var ycoord = 54.5;
+                    var firstName3 = document.getElementById("firstName3").value;
+                    var MI3 = document.getElementById("middleInitial3").value;
+                    var lastName3 = document.getElementById("lastName3").value;
+
+                    var student3 = document.getElementsByName("student3");
+                    var isStudent3;
+
+                    for(var i = 0; i < student3.length; i++) {
+                      if(student3[i].checked == true) {
+                        isStudent3 = student3[i].value;
+                      }
+                    }
+
+                    var runaway3 = document.getElementsByName("runaway3");
+                    var isRunaway3;
+
+                    for(var i = 0; i < runaway3.length; i++) {
+                      if(runaway3[i].checked == true) {
+                        isRunaway3 = runaway3[i].value;
+                      }
+                    }
+
+                    doc.text(38,ycoord, firstName3);
+                    doc.text(92.3, ycoord, MI3);
+                    doc.text(100, ycoord, lastName3);
+
+                    if(isStudent3 == 'No') {
+                      doc.text(179.5, ycoord - 1.8, 'X');
+                    }
+                    else {
+                      doc.text(174, ycoord - 1.8, 'X');
+                    }
+
+                    if(isRunaway3 == 'No') {
+                      doc.text(191, ycoord - 1.8, 'X');
+                    }
+                    else {
+                      doc.text(197, ycoord - 1.8, 'X');
+                    }
+                  }
+/*         end      third children  */
+/*                  fourth child   */
+                if (numChildren > 3 ) {
+                  var ycoord = 62;
+                    var firstName4 = document.getElementById("firstName4").value;
+                    var MI4 = document.getElementById("middleInitial4").value;
+                    var lastName4 = document.getElementById("lastName4").value;
+
+                    var student4 = document.getElementsByName("student4");
+                    var isStudent4;
+
+                    for(var i = 0; i < student4.length; i++) {
+                      if(student4[i].checked == true) {
+                        isStudent4 = student4[i].value;
+                      }
+                    }
+
+                    var runaway4 = document.getElementsByName("runaway4");
+                    var isRunaway4;
+
+                    for(var i = 0; i < runaway4.length; i++) {
+                      if(runaway4[i].checked == true) {
+                        isRunaway4 = runaway4[i].value;
+                      }
+                    }
+
+                    doc.text(38,ycoord, firstName4);
+                    doc.text(92.3, ycoord, MI4);
+                    doc.text(100, ycoord, lastName4);
+
+                    if(isStudent4 == 'No') {
+                      doc.text(179.5, ycoord - 2.7, 'X');
+                    }
+                    else {
+                      doc.text(174, ycoord - 2.7, 'X');
+                    }
+
+                    if(isRunaway4 == 'No') {
+                      doc.text(191, ycoord - 2.7, 'X');
+                    }
+                    else {
+                      doc.text(197, ycoord - 2.7, 'X');
+                    }
+                  }
+/*         end      fourth children  */
+                doc.text(176, 81, caseNumber);
+/*              child income */
+
+                var yCoorUpdate = 105.5;
+                var childIncome = document.getElementById("child-income").value;
+
+                var childIncomeOften = document.getElementsByName("child-income-often");
+                var childIncomeOftenNum;
+
+                for(var i = 0; i < childIncomeOften.length; i++) {
+                  if(childIncomeOften[i].checked == true) {
+                    childIncomeOftenNum = childIncomeOften[i].value;
+                  }
+                }
+
+                doc.text(139,yCoorUpdate, childIncome);
+
+                if(childIncomeOftenNum == 'Weekly') {
+                  doc.text(154.5, yCoorUpdate, 'X');
+                }
+                if(childIncomeOftenNum == "Bi-weekly") {
+                  doc.text(160.5, yCoorUpdate, 'X');
+                }
+                if(childIncomeOftenNum == "2x-Month") {
+                  doc.text(166.5, yCoorUpdate, 'X');
+                }
+                if(childIncomeOftenNum == "Monthly") {
+                  doc.text(172.5, yCoorUpdate, 'X');
+                }
+
+/*       end       child income */
+/*              household adults */
+                yCoorUpdate = 128.5;
+                var adultName1 = document.getElementById("adult-name1").value;
+                var adultIncome1 = document.getElementById("adult-income1").value;
+                var adultAssisstance1 = document.getElementById("adult-assisstance1").value;
+                var adultOther1 = document.getElementById("adult-other1").value;
+
+                doc.text(35.5, yCoorUpdate, adultName1);
+                doc.text(75.5, yCoorUpdate, adultIncome1);
+                doc.text(119.5, yCoorUpdate, adultAssisstance1);
+                doc.text(163.5, yCoorUpdate, adultOther1);
+
+                var adultIncomeOften1 = document.getElementsByName("adult-income-often1");
+                var adultIncomeOftenNum1;
+                var adultAssisstanceOften1 = document.getElementsByName("adult-assist-often1");
+                var adultAssisstanceOftenNum1;
+                var adultOtherOften1 = document.getElementsByName("adult-other-often1");
+                var adultOtherOftenNum1;
+
+                for(var i = 0; i < adultIncomeOften1.length; i++) {
+                  if(adultIncomeOften1[i].checked == true) {
+                    adultIncomeOftenNum1 = adultIncomeOften1[i].value;
+                  }
+                }
+                if(adultIncomeOftenNum1 == 'Weekly') {
+                  doc.text(90.5, yCoorUpdate, 'X');
+                }
+                if(adultIncomeOftenNum1 == "Bi-weekly") {
+                  doc.text(97.5, yCoorUpdate, 'X');
+                }
+                if(adultIncomeOftenNum1 == "2x-Month") {
+                  doc.text(103.5, yCoorUpdate, 'X');
+                }
+                if(adultIncomeOftenNum1 == "Monthly") {
+                  doc.text(109.5, yCoorUpdate, 'X');
+                }
+
+                for(var i = 0; i < adultAssisstanceOften1.length; i++) {
+                  if(adultAssisstanceOften1[i].checked == true) {
+                    adultAssisstanceOftenNum1 = adultAssisstanceOften1[i].value;
+                  }
+                }
+                if(adultAssisstanceOftenNum1 == 'Weekly') {
+                  doc.text(136.5, yCoorUpdate, 'X');
+                }
+                if(adultAssisstanceOftenNum1 == "Bi-weekly") {
+                  doc.text(140.5, yCoorUpdate, 'X');
+                }
+                if(adultAssisstanceOftenNum1 == "2x-Month") {
+                  doc.text(146.5, yCoorUpdate, 'X');
+                }
+                if(adultAssisstanceOftenNum1 == "Monthly") {
+                  doc.text(152.5, yCoorUpdate, 'X');
+                }
+
+                for(var i = 0; i < adultOtherOften1.length; i++) {
+                  if(adultOtherOften1[i].checked == true) {
+                    adultOtherOftenNum1 = adultOtherOften1[i].value;
+                  }
+                }
+                if(adultOtherOftenNum1 == 'Weekly') {
+                  doc.text(179.5, yCoorUpdate, 'X');
+                }
+                if(adultOtherOftenNum1 == "Bi-weekly") {
+                  doc.text(185.5, yCoorUpdate, 'X');
+                }
+                if(adultOtherOftenNum1 == "2x-Month") {
+                  doc.text(191.5, yCoorUpdate, 'X');
+                }
+                if(adultOtherOftenNum1 == "Monthly") {
+                  doc.text(197.5, yCoorUpdate, 'X');
+                }
+
+                if (numAdults > 1) {
+                  yCoorUpdate = 135;
+                  var adultName2 = document.getElementById("adult-name2").value;
+                  var adultIncome2 = document.getElementById("adult-income2").value;
+                  var adultAssisstance2 = document.getElementById("adult-assisstance2").value;
+                  var adultOther2 = document.getElementById("adult-other2").value;
+
+                  doc.text(35.5, yCoorUpdate, adultName2);
+                  doc.text(75.5, yCoorUpdate, adultIncome2);
+                  doc.text(119.5, yCoorUpdate, adultAssisstance2);
+                  doc.text(163.5, yCoorUpdate, adultOther2);
+
+                  var adultIncomeOften2 = document.getElementsByName("adult-income-often2");
+                  var adultIncomeOftenNum2;
+                  var adultAssisstanceOften2 = document.getElementsByName("adult-assist-often2");
+                  var adultAssisstanceOftenNum2;
+                  var adultOtherOften2 = document.getElementsByName("adult-other-often2");
+                  var adultOtherOftenNum2;
+
+                  for(var i = 0; i < adultIncomeOften2.length; i++) {
+                    if(adultIncomeOften2[i].checked == true) {
+                      adultIncomeOftenNum2 = adultIncomeOften2[i].value;
+                    }
+                  }
+                  if(adultIncomeOftenNum2 == 'Weekly') {
+                    doc.text(90.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum2 == "Bi-weekly") {
+                    doc.text(97.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum2 == "2x-Month") {
+                    doc.text(103.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum2 == "Monthly") {
+                    doc.text(109.5, yCoorUpdate, 'X');
+                  }
+
+                  for(var i = 0; i < adultAssisstanceOften2.length; i++) {
+                    if(adultAssisstanceOften2[i].checked == true) {
+                      adultAssisstanceOftenNum2 = adultAssisstanceOften2[i].value;
+                    }
+                  }
+                  if(adultAssisstanceOftenNum2 == 'Weekly') {
+                    doc.text(136.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum2 == "Bi-weekly") {
+                    doc.text(140.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum2 == "2x-Month") {
+                    doc.text(146.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum2 == "Monthly") {
+                    doc.text(152.5, yCoorUpdate, 'X');
+                  }
+
+                  for(var i = 0; i < adultOtherOften2.length; i++) {
+                    if(adultOtherOften2[i].checked == true) {
+                      adultOtherOftenNum2 = adultOtherOften2[i].value;
+                    }
+                  }
+                  if(adultOtherOftenNum2 == 'Weekly') {
+                    doc.text(179.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum2 == "Bi-weekly") {
+                    doc.text(185.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum2 == "2x-Month") {
+                    doc.text(191.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum2 == "Monthly") {
+                    doc.text(197.5, yCoorUpdate, 'X');
+                  }
+                }
+
+                if (numAdults > 2) {
+                  yCoorUpdate = 141.5;
+                  var adultName3 = document.getElementById("adult-name3").value;
+                  var adultIncome3 = document.getElementById("adult-income3").value;
+                  var adultAssisstance3 = document.getElementById("adult-assisstance3").value;
+                  var adultOther3 = document.getElementById("adult-other3").value;
+
+                  doc.text(35.5, yCoorUpdate, adultName3);
+                  doc.text(75.5, yCoorUpdate, adultIncome3);
+                  doc.text(119.5, yCoorUpdate, adultAssisstance3);
+                  doc.text(163.5, yCoorUpdate, adultOther3);
+
+                  var adultIncomeOften3 = document.getElementsByName("adult-income-often3");
+                  var adultIncomeOftenNum3;
+                  var adultAssisstanceOften3 = document.getElementsByName("adult-assist-often3");
+                  var adultAssisstanceOftenNum3;
+                  var adultOtherOften3 = document.getElementsByName("adult-other-often3");
+                  var adultOtherOftenNum3;
+
+                  for(var i = 0; i < adultIncomeOften3.length; i++) {
+                    if(adultIncomeOften3[i].checked == true) {
+                      adultIncomeOftenNum3 = adultIncomeOften3[i].value;
+                    }
+                  }
+                  if(adultIncomeOftenNum3 == 'Weekly') {
+                    doc.text(90.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum3 == "Bi-weekly") {
+                    doc.text(97.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum3 == "2x-Month") {
+                    doc.text(103.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum3 == "Monthly") {
+                    doc.text(109.5, yCoorUpdate, 'X');
+                  }
+
+                  for(var i = 0; i < adultAssisstanceOften3.length; i++) {
+                    if(adultAssisstanceOften3[i].checked == true) {
+                      adultAssisstanceOftenNum3 = adultAssisstanceOften3[i].value;
+                    }
+                  }
+                  if(adultAssisstanceOftenNum3 == 'Weekly') {
+                    doc.text(136.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum3 == "Bi-weekly") {
+                    doc.text(140.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum3 == "2x-Month") {
+                    doc.text(146.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum3 == "Monthly") {
+                    doc.text(152.5, yCoorUpdate, 'X');
+                  }
+
+                  for(var i = 0; i < adultOtherOften3.length; i++) {
+                    if(adultOtherOften3[i].checked == true) {
+                      adultOtherOftenNum3 = adultOtherOften3[i].value;
+                    }
+                  }
+                  if(adultOtherOftenNum3 == 'Weekly') {
+                    doc.text(179.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum3 == "Bi-weekly") {
+                    doc.text(185.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum3 == "2x-Month") {
+                    doc.text(191.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum3 == "Monthly") {
+                    doc.text(197.5, yCoorUpdate, 'X');
+                  }
+                }
+
+                if (numAdults > 3) {
+                  yCoorUpdate = 148;
+                  var adultName4 = document.getElementById("adult-name4").value;
+                  var adultIncome4 = document.getElementById("adult-income4").value;
+                  var adultAssisstance4 = document.getElementById("adult-assisstance4").value;
+                  var adultOther4 = document.getElementById("adult-other4").value;
+
+                  doc.text(35.5, yCoorUpdate, adultName4);
+                  doc.text(75.5, yCoorUpdate, adultIncome4);
+                  doc.text(119.5, yCoorUpdate, adultAssisstance4);
+                  doc.text(163.5, yCoorUpdate, adultOther4);
+
+                  var adultIncomeOften4 = document.getElementsByName("adult-income-often4");
+                  var adultIncomeOftenNum4;
+                  var adultAssisstanceOften4 = document.getElementsByName("adult-assist-often4");
+                  var adultAssisstanceOftenNum4;
+                  var adultOtherOften4 = document.getElementsByName("adult-other-often4");
+                  var adultOtherOftenNum4;
+
+                  for(var i = 0; i < adultIncomeOften4.length; i++) {
+                    if(adultIncomeOften4[i].checked == true) {
+                      adultIncomeOftenNum4 = adultIncomeOften4[i].value;
+                    }
+                  }
+                  if(adultIncomeOftenNum4 == 'Weekly') {
+                    doc.text(90.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum4 == "Bi-weekly") {
+                    doc.text(97.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum4 == "2x-Month") {
+                    doc.text(103.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum4 == "Monthly") {
+                    doc.text(109.5, yCoorUpdate, 'X');
+                  }
+
+                  for(var i = 0; i < adultAssisstanceOften4.length; i++) {
+                    if(adultAssisstanceOften4[i].checked == true) {
+                      adultAssisstanceOftenNum4 = adultAssisstanceOften4[i].value;
+                    }
+                  }
+                  if(adultAssisstanceOftenNum4 == 'Weekly') {
+                    doc.text(136.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum4 == "Bi-weekly") {
+                    doc.text(140.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum4 == "2x-Month") {
+                    doc.text(146.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum4 == "Monthly") {
+                    doc.text(152.5, yCoorUpdate, 'X');
+                  }
+
+                  for(var i = 0; i < adultOtherOften4.length; i++) {
+                    if(adultOtherOften4[i].checked == true) {
+                      adultOtherOftenNum4 = adultOtherOften4[i].value;
+                    }
+                  }
+                  if(adultOtherOftenNum4 == 'Weekly') {
+                    doc.text(179.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum4 == "Bi-weekly") {
+                    doc.text(185.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum4 == "2x-Month") {
+                    doc.text(191.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum4 == "Monthly") {
+                    doc.text(197.5, yCoorUpdate, 'X');
+                  }
+                }
+
+                if (numAdults > 4) {
+                  yCoorUpdate = 154.5;
+                  var adultName5 = document.getElementById("adult-name5").value;
+                  var adultIncome5 = document.getElementById("adult-income5").value;
+                  var adultAssisstance5 = document.getElementById("adult-assisstance5").value;
+                  var adultOther5 = document.getElementById("adult-other5").value;
+
+                  doc.text(35.5, yCoorUpdate, adultName5);
+                  doc.text(75.5, yCoorUpdate, adultIncome5);
+                  doc.text(119.5, yCoorUpdate, adultAssisstance5);
+                  doc.text(163.5, yCoorUpdate, adultOther5);
+
+                  var adultIncomeOften5 = document.getElementsByName("adult-income-often5");
+                  var adultIncomeOftenNum5;
+                  var adultAssisstanceOften5 = document.getElementsByName("adult-assist-often5");
+                  var adultAssisstanceOftenNum5;
+                  var adultOtherOften5 = document.getElementsByName("adult-other-often5");
+                  var adultOtherOftenNum5;
+
+                  for(var i = 0; i < adultIncomeOften5.length; i++) {
+                    if(adultIncomeOften5[i].checked == true) {
+                      adultIncomeOftenNum5 = adultIncomeOften5[i].value;
+                    }
+                  }
+                  if(adultIncomeOftenNum5 == 'Weekly') {
+                    doc.text(90.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum5 == "Bi-weekly") {
+                    doc.text(97.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum5 == "2x-Month") {
+                    doc.text(103.5, yCoorUpdate, 'X');
+                  }
+                  if(adultIncomeOftenNum5 == "Monthly") {
+                    doc.text(109.5, yCoorUpdate, 'X');
+                  }
+
+                  for(var i = 0; i < adultAssisstanceOften5.length; i++) {
+                    if(adultAssisstanceOften5[i].checked == true) {
+                      adultAssisstanceOftenNum5 = adultAssisstanceOften5[i].value;
+                    }
+                  }
+                  if(adultAssisstanceOftenNum5 == 'Weekly') {
+                    doc.text(136.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum5 == "Bi-weekly") {
+                    doc.text(140.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum5 == "2x-Month") {
+                    doc.text(146.5, yCoorUpdate, 'X');
+                  }
+                  if(adultAssisstanceOftenNum5 == "Monthly") {
+                    doc.text(152.5, yCoorUpdate, 'X');
+                  }
+
+                  for(var i = 0; i < adultOtherOften5.length; i++) {
+                    if(adultOtherOften5[i].checked == true) {
+                      adultOtherOftenNum5 = adultOtherOften5[i].value;
+                    }
+                  }
+                  if(adultOtherOftenNum5 == 'Weekly') {
+                    doc.text(179.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum5 == "Bi-weekly") {
+                    doc.text(185.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum5 == "2x-Month") {
+                    doc.text(191.5, yCoorUpdate, 'X');
+                  }
+                  if(adultOtherOftenNum5 == "Monthly") {
+                    doc.text(197.5, yCoorUpdate, 'X');
+                  }
+                }
+
+/*       end      household adults */
+/*              ssn stuff */
+                yCoorUpdate = 163.5;
+                var houseMembers = document.getElementById("house-members").value;
+                var ssnNum = document.getElementById("last-ssn").value;
+
+                doc.text(63,yCoorUpdate, houseMembers);
+                doc.text(142,yCoorUpdate, ssnNum);
+
+                var noSSN = document.getElementsByName("no-ssn");
+                var isNoSSN;
+
+                for(var i = 0; i < noSSN.length; i++) {
+                  if(noSSN[i].checked == true) {
+                    isNoSSN = noSSN[i].value;
+                  }
+                }
+
+                if(isNoSSN == 'no-ssn') {
+                  doc.text(173, yCoorUpdate, 'X');
+                }
+/*       end       ssn stuff */
+/*              contact info */
+              var address = document.getElementById("street-address").value;
+              var city = document.getElementById("city").value;
+              var state = document.getElementById("state").value;
+              var zip = document.getElementById("zip").value;
+              var adultName = document.getElementById("adult-name").value;
+              var date = document.getElementById("date").value;
+
+              doc.text(15,186.5, address);
+              doc.text(78,186.5, city);
+              doc.text(110,186.5, state);
+              doc.text(124,186.5, zip);
+              doc.text(15,196.5, adultName);
+              doc.text(82,196.5, adultName);
+              doc.text(150,196.5, date);
+/*       end       contact info */
+
+
+                    //save pdf doc
+                    var pdfname = firstName + MI + lastName + '.pdf';
+                    doc.save(pdfname);
+
+
+              }
+
+              $(".mat-input").focus(function(){
+                $(this).parent().addClass("is-active is-completed");
+              });
+
+              $(".mat-input").focusout(function(){
+                if($(this).val() === "")
+                  $(this).parent().removeClass("is-completed");
+                $(this).parent().removeClass("is-active");
+              })
+        </script>
+
+    </div>
+  </body>
+</html>
