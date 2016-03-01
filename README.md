@@ -1,7 +1,3 @@
-# Credits
-We used jsPDF to create the JS => PDF file.
-Big thanks to MrRio, https://github.com/MrRio/jsPDF, for providing this open source code.
-
 # License
 Electronic Application Transformation UX
 The MIT License (MIT)
