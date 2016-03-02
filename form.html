@@ -23,10 +23,12 @@
 
         #titleText
         {
-           font-size: 2.5em !important;
+           font-size: 30px !important;
            color: #FFFFFF !important;
            font-family: 'Open Sans', sans-serif;
            font-weight: 300;
+           margin-top: 70px;
+           /*text-align: center;*/
         }
 
         body {
@@ -99,6 +101,7 @@
           padding: 15px 30px;
           border-radius: 10px;
           cursor: pointer;
+          margin-bottom: 70px;
         }
 
         #kid2 {
@@ -123,6 +126,25 @@
         #adult5 {
           display: none;
         }
+
+        #usda-nds {
+          margin-bottom: 55px;
+        }
+
+        #usda-nds p {
+          margin-bottom: 5px;
+          margin-top: 5px;
+        }
+
+        #usda-nds-title {
+          margin-bottom: 15px;
+        }
+
+        #useofinfo {
+          margin-bottom: 45px;
+        }
+
+
 
     </style>
 
@@ -514,15 +536,116 @@
         <label  for="zip" class="mat-label" name="zip">ZIP Code</label>
         <input  type="text" class="mat-input" id="zip" required>
       </div>
+      <div class="mat-div" style="margin-top:15px;">
+        <h1>USDA Non-Discrimination Statement</h1>
+      <p id="usda-nds">
+
+The U.S. Department of Agriculture prohibits discrimination against its
+customers, employees, and applicants for employment on the bases of race,
+color, national origin, age, disability, sex, gender identity, religion, reprisal, and
+where applicable, political beliefs, marital status, familial or parental status,
+sexual orientation, or all or part of an individual’s income is derived from any
+public assistance program, or protected genetic information in employment or in
+any program or activity conducted or funded by the Department. (Not all
+prohibited bases will apply to all programs and/or employment activities.)
+If you wish to file a Civil Rights program complaint of discrimination, complete
+the USDA Program Discrimination Complaint Form, found online at
+<a href ="http://www.ascr.usda.gov/complaint_filing_cust.html">http://www.ascr.usda.gov/complaint_filing_cust.html</a>, or at any USDA office, or
+call (866) 632-9992 to request the form. You may also write a letter containing
+all of the information requested in the form. Send your completed complaint form
+or letter to us by mail at U.S. Department of Agriculture, Director, Office of
+Adjudication, 1400 Independence Avenue, S.W., Washington, D.C. 20250-9410,
+by fax (202)690-7442, or email at program.intake@usda.gov.
+Individuals who are deaf, hard of hearing or have speech disabilities may
+contact USDA through the Federal Relay Service at (800) 877-8339; or (800)
+845-6136 (Spanish).
+USDA is an equal opportunity provider and employer.
+      </p>
+
+<h1>Use of Information Statement</h1>
+<p id="useofinfo">
+  The Richard B. Russell National School Lunch Act requires the information on
+this application. You do not have to give the information, but if you do not submit
+all needed information, we cannot approve your child for free or reduced price
+meals. You must include the last four digits of the social security number of the
+[INSERT	COMPETITION	GRAPHIC]
+REQUIRED STATEMENTS [COMPETITON NAME]
+adult household member who signs the application. The social security number
+is not required when you apply on behalf of a foster child or you list a
+Supplemental Nutrition Assistance Program (SNAP), Temporary Assistance for
+Needy Families (TANF) Program or Food Distribution Program on Indian
+Reservations (FDPIR) case number or other FDPIR identifier for your child or
+when you indicate that the adult household member signing the application does
+not have a social security number. We will use your information to determine if
+your child is eligible for free or reduced price meals, and for administration and
+enforcement of the lunch and breakfast programs.
+We may share your eligibility information with education, health, and nutrition
+programs to help them evaluate, fund, or determine benefits for their programs,
+auditors for program reviews, and law enforcement officials to help them look
+into violations of program rules.
+</p>
+      <input type="radio" name="i-agree" value="i-agree" > I understand and agree to provide this information to the USDA.<br>
+      </div>
       <div class="mat-div">
         <label  for="adult-name" class="mat-label" name="adult-name">Name of Adult Completing This Form</label>
         <input  type="text" class="mat-input" id="adult-name" required>
       </div>
+
+<h1 style="margin-top: 45px; margin-bottom: 20px;">Attesting Statement</h1>
+
+<p>
+  The person signing is furnishing true information and to advise that person that
+the application is being made in connection with the receipt of Federal funds;
+School officials may verify the information on the application; and
+Deliberate misrepresentation of the information may subject the applicant to
+prosecution under State and Federal statutes.
+</p>
+
+<div class="mat-div">
+  <label  for="ethnicity" class="mat-label" name="ethnicity">Children’s Racial & Ethnic Identities Question (Not Required)</label>
+  <input  type="text" class="mat-input" id="adult-other1" required>
+  <br>
+  <p>
+    Ethnicity (check one):
+  </p>
+  <input id="checkbox-input-2" type="checkbox" value="hispanic">
+  <label for="checkbox-input-2" class="input-helper input-helper--checkbox">Hispanic or Latino</label> <br>
+
+  <input id="checkbox-input-2" type="checkbox" value="hispanic">
+  <label for="checkbox-input-2" class="input-helper input-helper--checkbox">Not Hispanic or Latino</label><br><br>
+  <p>
+  Race (check one or more):
+  </p>
+  <form>
+
+      <div class="input-row">
+          <input id="checkbox-input-1" type="checkbox" value="race">
+          <label for="checkbox-input-1" class="input-helper input-helper--checkbox">American Indian or Alaskan Native</label>
+          <br>
+          <input id="checkbox-input-2" type="checkbox" value="race">
+          <label for="checkbox-input-2" class="input-helper input-helper--checkbox">Asian</label><br>
+          <input id="checkbox-input-2" type="checkbox" value="race">
+          <label for="checkbox-input-2" class="input-helper input-helper--checkbox">Black or African American</label><br>
+          <input id="checkbox-input-2" type="checkbox" value="race">
+          <label for="checkbox-input-2" class="input-helper input-helper--checkbox">Native Hawaiian</label><br>
+          <input id="checkbox-input-2" type="checkbox" value="race">
+          <label for="checkbox-input-2" class="input-helper input-helper--checkbox">Other Pacific Islander</label><br>
+          <input id="checkbox-input-2" type="checkbox" value="race">
+          <label for="checkbox-input-2" class="input-helper input-helper--checkbox">White</label><br><br><br>
+      </div>
+  </form>
+</div>
+
+      <div class="mat-div">
+        <label  for="adult-name" class="mat-label" name="e-sig">Signature of Adult</label>
+        <input  type="text" class="mat-input" id="e-sig" required>
+      </div>
         <!-- TODO: replace with autoDate -->
         <div class="mat-div">
-        <label  for="zip" class="mat-label" name="date">Date (MM/DD/YYYY)</label>
+        <label  for="zip" class="mat-label" name="date">Today's Date (MM/DD/YYYY)</label>
         <input  type="text" class="mat-input" id="date" required>
       </div>
+
 
   <!-- end step 4 -->
     </form>
@@ -1198,6 +1321,20 @@
                   doc.text(173, yCoorUpdate, 'X');
                 }
 /*       end       ssn stuff */
+/*        agreement #1 (Discrimination)  */
+var iAgree = document.getElementsByName("i-agree");
+var isIAgree;
+
+for(var i = 0; i < iAgree.length; i++) {
+  if(iAgree[i].checked == true) {
+    isIAgree = iAgree[i].value;
+  }
+}
+
+if(isNoSSN == 'no-ssn') {
+  doc.text(173, yCoorUpdate, 'X');
+}
+/*              end agreemtns */
 /*              contact info */
               var address = document.getElementById("street-address").value;
               var city = document.getElementById("city").value;
@@ -1205,6 +1342,7 @@
               var zip = document.getElementById("zip").value;
               var adultName = document.getElementById("adult-name").value;
               var date = document.getElementById("date").value;
+              var sig = document.getElementById("e-sig").value;
 
               doc.text(15,186.5, address);
               doc.text(78,186.5, city);
@@ -1212,7 +1350,7 @@
               doc.text(124,186.5, zip);
               doc.text(15,196.5, adultName);
               doc.text(82,196.5, adultName);
-              doc.text(150,196.5, date);
+              doc.text(150,196.5, sig);
 /*       end       contact info */
 
 
